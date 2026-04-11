@@ -4,12 +4,13 @@ document.getElementById("myButton").addEventListener("click", function () {
     clickCount++;
     document.getElementById("myText").textContent = "Mouse Clicks: " + clickCount;
 });
-document.getElementById("UpgradeButton").addEventListener("click", function ) {
+document.getElementById("UpgradeButton").addEventListener("click", function () {
     if (clickCount >= 20) {
         clickCount = clickCount - 20;
         document.getElementById("myText").textContent = "Mouse Clicks: " + clickCount;
         alert("Clicker Upgraded! You can now click faster!");
+        clickCount = clickCount + 1;
     } else {
         alert("Not enough clicks to upgrade! You need at least 20 clicks.");
     }
-}
+});
